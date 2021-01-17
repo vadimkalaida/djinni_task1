@@ -10,10 +10,10 @@ export const Header = styled.div`
   min-height: 100px;
   background: #5685FD;
   @media(min-width: 1000px) and (max-width: 1600px) {
-    width: 94%;
+    width: 95%;
   }
   @media(min-width: 660px) and (max-width: 999px) {
-    width: 92%;
+    width: 93%;
   }
   @media(min-width: 410px) and (max-width: 659px) {
     width: 90%;

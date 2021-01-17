@@ -67,6 +67,14 @@ export const LeftBarMenu = styled.div`
     @media(min-width: 320px) and (max-width: 680px) {
       font-size: 24px;
     }
+    @media(min-height: 320px) and (max-height: 680px) {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    @media(min-height: 320px) and (max-height: 569px) {
+      margin-top: 1px;
+      margin-bottom: 1px;
+    }
   }
   @media(min-width: 1000px) and (max-width: 1600px) {
     width: 5%;
@@ -98,6 +106,9 @@ export const LeftBarMenuBottom = styled.div`
   justify-content: flex-end;
   align-items: center;
   & button {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
+    @media(min-height: 320px) and (max-height: 680px) {
+      margin-bottom: 75px;
+    }
   }
 `;
