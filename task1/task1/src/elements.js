@@ -28,4 +28,7 @@ export const AppContent = styled.div`
   width: 100%;
   display: flex;
   position: relative;
+  background: #fff;
+  background: -webkit-linear-gradient(to bottom, #F1F0F0, #FEFEFE);
+  background: linear-gradient(to bottom, #F1F0F0, #FEFEFE);
 `;
