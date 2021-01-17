@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { TopBar, TopBarOpenButton, TopBarContent, TopBarTextInformationPart, TopBarTextInformationPartBlock, TopBarInformationTitle, TopBarInformationValue,
-  TopBarRight, TopBarText, TopBarSwitch, TopBarSlider } from "./elements";
+  TopBarRight, TopBarText, TopBarSwitch, TopBarSlider, TopBarBottomPart, TopBarBottomTextBox } from "./elements";
 
 const TopBarComponent = () => {
   const [ topBarIsOpen, setTopBarIsOpen ] = useState(false);
+  const [ isOnline, setIsOnline ] = useState(true);
 
   const topBarOpenButtonFunc = () => {
     setTopBarIsOpen(!topBarIsOpen);
+  };
+
+  const topBarChangeStatus = () => {
+    setIsOnline(!isOnline);
   };
 
   return(
@@ -40,12 +45,21 @@ const TopBarComponent = () => {
 
         <TopBarRight>
           <TopBarText>switch(basic)</TopBarText>
-          <TopBarSwitch className={'switch'}>
+          <TopBarSwitch>
             <input type="checkbox" />
-            <TopBarSlider className={'slider round'}></TopBarSlider>
+            <TopBarSlider></TopBarSlider>
           </TopBarSwitch>
         </TopBarRight>
       </TopBarContent>
+
+      <TopBarBottomPart style={{ display: topBarIsOpen ? 'flex' : 'none'}}>
+        <TopBarBottomTextBox onClick={topBarChangeStatus}>
+          <p>Status: <span style={{ color: isOnline ? '#00FF00' : '#FF0800' }}>{ isOnline ? 'online' : 'offline' }</span></p>
+        </TopBarBottomTextBox>
+        <TopBarBottomTextBox>
+          <p>Last scan { sessionStorage.getItem('Last Scan Date') }</p>
+        </TopBarBottomTextBox>
+      </TopBarBottomPart>
     </TopBar>
   );
 };

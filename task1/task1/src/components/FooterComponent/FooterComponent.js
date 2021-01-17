@@ -5,7 +5,7 @@ const FooterComponent = () => {
   return(
     <Footer>
       <FooterContainer>
-        <FooterParagraph>&#169;{new Date().getFullYear()}|All Rights Reserved.</FooterParagraph>
+        <FooterParagraph>&#169;{new Date().getFullYear()} | All Rights Reserved.</FooterParagraph>
       </FooterContainer>
     </Footer>
   );

@@ -8,6 +8,13 @@ import { AppBlock, AppContent } from "./elements";
 
 const App = () => {
 
+  const getRandomDate = (startDate, endDate) => {
+    let foundDate = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
+    return `${foundDate.toLocaleString('default', { month: 'short' })} ${foundDate.getDate()} ${foundDate.getFullYear()}`;
+  };
+
+  sessionStorage.setItem('Last Scan Date', getRandomDate(new Date(2020, 0, 1), new Date()).toString());
+
   useEffect(() => {
     const plansArray = ['Basic', 'Standard', 'Premium', 'Premium+', 'Advanced'];
 

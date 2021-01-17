@@ -4,8 +4,7 @@ import { displayFlex } from "../../elements";
 export const TopBar = styled.div`
   width: 100%;
   min-height: 100px;
-  display: flex;
-  align-items: flex-start;
+  ${ displayFlex('flex-start', 'flex-start', 'column') }
 `;
 
 export const TopBarOpenButton = styled.button`
@@ -178,5 +177,44 @@ export const TopBarSlider = styled.span`
     background-color: #fff;
     transition: .2s;
     border-radius: 50%;
+  }
+`;
+
+export const TopBarBottomPart = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+export const TopBarBottomTextBox = styled.div`
+  height: 30px;
+  border: 1px solid #BEBEBE;
+  border-radius: 5px;
+  ${ displayFlex('center', 'center', 'row') }
+  margin-left: 5px;
+  margin-right: 5px;
+  &:first-child {
+    cursor: pointer;
+    user-select: none;
+  }
+  &:last-child {
+    margin-right: 3%;
+  }
+  & p {
+    font-size: 20px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #BEBEBE;
+    letter-spacing: .8px;
+    & span {
+      text-transform: uppercase;
+    }
+    @media(min-width: 550px) and (max-width: 953px) {
+      font-size: 18px;
+    }
+    @media(min-width: 320px) and (max-width: 549px) {
+      font-size: 14px;
+    }
   }
 `;
