@@ -1,12 +1,16 @@
 import './App.scss';
 import HeaderComponent from './components/HeaderComponent/HeaderComponent';
-import { AppBlock } from "./elements";
+import LeftBarComponent from "./components/LeftBarComponent/LeftBarComponent";
+import { AppBlock, AppContent } from "./elements";
 
 const App = () => {
   return (
     <AppBlock>
       <HeaderComponent />
-      ghre
+      <AppContent>
+        <LeftBarComponent />
+        asdsasd
+      </AppContent>
     </AppBlock>
   );
 };

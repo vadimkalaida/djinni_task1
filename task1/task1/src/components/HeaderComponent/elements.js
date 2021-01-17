@@ -1,16 +1,21 @@
 import styled from 'styled-components';
+import { textGradient } from "../../elements";
 
 export const TopBlock = styled.div`
   width: 100%;
-  display: flex;
+  display: inline-block;
 `;
 
 export const Header = styled.div`
   width: 96%;
   min-height: 100px;
   background: #5685FD;
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
   @media(min-width: 1000px) and (max-width: 1600px) {
     width: 95%;
+    margin-left: 5%;
   }
   @media(min-width: 660px) and (max-width: 999px) {
     width: 93%;
@@ -74,9 +79,7 @@ export const HeaderButton = styled.button`
     background: #EAEAEA;
   }
   & i {
-    background: -webkit-linear-gradient(60deg, #73ADF5, #475261);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
+    ${textGradient('#73ADF5', '#475261', 60)}
   }
   @media(min-width: 320px) and (max-width: 550px) {
     margin-left: 5%;

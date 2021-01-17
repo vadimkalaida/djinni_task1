@@ -1,12 +1,10 @@
 import React from 'react';
 import { TopBlock, Header, HeaderContainer, HeaderLeft, HeaderRight, HeaderButton } from './elements';
 import { BigParagraph } from "../../elements";
-import LeftBarComponent from "../LeftBarComponent/LeftBarComponent";
 
 const HeaderComponent = () => {
   return(
     <TopBlock>
-      <LeftBarComponent />
       <Header>
         <HeaderContainer>
           <HeaderLeft>
