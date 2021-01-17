@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { LeftBar, LeftBarOpenMenuButton, LeftBarButton, LeftBarMenu, LeftBarMenuTop, LeftBarMenuBottom } from './elements';
 
 const LeftBarComponent = () => {
-  const [openMenuIcon, setOpenMenuIcon] = useState(false);
+  const [ openMenuIcon, setOpenMenuIcon ] = useState(false);
 
   const openMenuClick = () => {
     sessionStorage.setItem('isLeftBarMenuOpened', !openMenuIcon);
     setOpenMenuIcon(!openMenuIcon);
-
   };
 
   return(

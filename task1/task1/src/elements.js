@@ -10,6 +10,17 @@ export const textGradient = (firstColor, secondColor, numberOfDegrees) => {
   );
 };
 
+export const displayFlex = (justifyContentValue, alignItemsValue, flexDirectionValue) => {
+  return(
+    `
+      display: flex;
+      justify-content: ${justifyContentValue};
+      align-items: ${alignItemsValue};
+      flex-direction: ${flexDirectionValue};
+    `
+  );
+};
+
 export const AppBlock = styled.div`
   width: 100%;
   text-align: left;
@@ -28,7 +39,4 @@ export const AppContent = styled.div`
   width: 100%;
   display: flex;
   position: relative;
-  background: #fff;
-  background: -webkit-linear-gradient(to bottom, #F1F0F0, #FEFEFE);
-  background: linear-gradient(to bottom, #F1F0F0, #FEFEFE);
 `;
