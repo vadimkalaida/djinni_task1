@@ -1,19 +1,37 @@
 import styled from 'styled-components';
 
-export const Header = styled.div`
+export const TopBlock = styled.div`
   width: 100%;
+  display: flex;
+`;
+
+export const Header = styled.div`
+  width: 96%;
   min-height: 100px;
   background: #5685FD;
+  @media(min-width: 1000px) and (max-width: 1600px) {
+    width: 94%;
+  }
+  @media(min-width: 660px) and (max-width: 999px) {
+    width: 92%;
+  }
+  @media(min-width: 410px) and (max-width: 659px) {
+    width: 90%;
+  }
+  @media(min-width: 320px) and (max-width: 409px) {
+    width: 86%;
+  }
 `;
 
 export const HeaderContainer = styled.div`
-  width: 90%;
+  width: 95%;
   min-height: 100px;
   margin: auto;
   display: flex;
   align-items: center;
   @media(min-width: 320px) and (max-width: 550px) {
     flex-direction: column;
+    width: 100%;
   }
 `;
 
