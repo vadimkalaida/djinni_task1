@@ -3,7 +3,7 @@ import { displayFlex } from "../../elements";
 
 export const TopBar = styled.div`
   width: 100%;
-  min-height: 100px;
+  min-height: 0px;
   ${ displayFlex('flex-start', 'flex-start', 'column') }
 `;
 

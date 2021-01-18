@@ -19,7 +19,7 @@ const templateForMediaLeftBar = `
 
 export const LeftBar = styled.div`
   width: 4%;
-  height: 90vh;
+  height: 0;
   transition: .2s;
   ${ displayFlex('flex-start', 'flex-start', 'column') }
   z-index: 9999;

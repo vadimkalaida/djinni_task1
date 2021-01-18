@@ -103,6 +103,7 @@ export const HeaderButton = styled.button`
   margin-left: 10px;
   margin-right: 10px;
   cursor: pointer;
+  outline: none;
   font-size: 24px;
   transition: .2s;
   background: #F3F3F3;
