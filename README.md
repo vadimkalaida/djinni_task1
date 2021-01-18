@@ -1,6 +1,13 @@
 Preview:
 ![previewVideo](https://j.gifs.com/ROpGzY.gif)
 
+Website was developed using React JS
+
+<b>Instruction for running:</b>
+1. your path should be ".../djinni_task1/task1/task1"
+2. run "npm i"
+3. run "npm start'
+
 Some functionalities:
 1. Left menu bar, should be expandable on click. - ready
 
