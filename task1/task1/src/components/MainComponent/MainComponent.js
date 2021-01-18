@@ -1,7 +1,12 @@
 import React from 'react';
-import { Main, MainContainer, MainLeftPart, MainNotificationsBlock, MainTitle, MainRightPart, MainRightPartBlock, MainRightPartParagraph, MainRightPartScoreNumber, MainRightPartLine, MainRightPartViewsNumber } from "./elements";
+import { Main, MainContainer, MainLeftPart, MainNotificationsBlock, MainTitle, MainRightPart, MainRightPartBlock,
+  MainRightPartTitle, MainRightPartParagraph, MainRightPartScoreNumber, MainRightPartLine, MainRightPartViewsNumber } from "./elements";
 
-const MainComponent = () => {
+const MainComponent = ( ) => {
+  const numberOfScores = Math.floor(Math.random() * 100) * 10;
+  const numberOfViews = Math.floor(Math.random() * 10000);
+
+
   return(
     <Main>
       <MainContainer>
@@ -12,15 +17,15 @@ const MainComponent = () => {
         </MainLeftPart>
         <MainRightPart>
           <MainRightPartBlock>
-            <MainTitle>Status</MainTitle>
+            <MainRightPartTitle>Status</MainRightPartTitle>
             <MainRightPartParagraph>Your score</MainRightPartParagraph>
-            <MainRightPartScoreNumber>{ sessionStorage.getItem('Score') }</MainRightPartScoreNumber>
+            <MainRightPartScoreNumber>{ numberOfScores }</MainRightPartScoreNumber>
             <MainRightPartLine></MainRightPartLine>
             <MainRightPartParagraph>Profile views this week:</MainRightPartParagraph>
-            <MainRightPartViewsNumber>{ sessionStorage.getItem('Views') }</MainRightPartViewsNumber>
+            <MainRightPartViewsNumber>{ numberOfViews }</MainRightPartViewsNumber>
           </MainRightPartBlock>
           <MainRightPartBlock>
-            <MainTitle>Earnings</MainTitle>
+            <MainRightPartTitle>Earnings</MainRightPartTitle>
             <MainRightPartParagraph>Total</MainRightPartParagraph>
           </MainRightPartBlock>
         </MainRightPart>

@@ -21,10 +21,10 @@ export const Header = styled.div`
     width: 93%;
   }
   @media(min-width: 410px) and (max-width: 659px) {
-    width: 90%;
+    width: 93%;
   }
   @media(min-width: 320px) and (max-width: 409px) {
-    width: 86%;
+    width: 92%;
   }
 `;
 

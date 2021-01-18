@@ -5,7 +5,7 @@ Some functionalities:
 
 3. Search icon on top right, on click expands into input field, and is possible to type keywords - ready
 
-4. Switch button (top right bar) changes the layout - not ready
+4. Switch button (top right bar) changes the layout - ready
 
 5. Status button on top right, on click changes statement (online/offline) - ready
 

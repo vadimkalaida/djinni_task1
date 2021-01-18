@@ -4,7 +4,11 @@ import { displayFlex } from "../../elements";
 export const TopBar = styled.div`
   width: 100%;
   min-height: 0px;
+  margin-bottom: 15px;
   ${ displayFlex('flex-start', 'flex-start', 'column') }
+  @media(min-width: 320px) and (max-width: 500px) {
+    margin-bottom: 25px;
+  }
 `;
 
 export const TopBarOpenButton = styled.button`

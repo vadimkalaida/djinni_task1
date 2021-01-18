@@ -5,15 +5,13 @@ const templateForMediaLeftBar = `
   @media(min-width: 1000px) and (max-width: 1600px) {
     width: 5%;
   }
-  @media(min-width: 660px) and (max-width: 999px) {
+  @media(min-width: 410px) and (max-width: 999px) {
     width: 7%;
   }
-  @media(min-width: 410px) and (max-width: 659px) {
-    width: 10%;
-  }
   @media(min-width: 320px) and (max-width: 409px) {
-    width: 14%;
+    width: 8%;
   }
+
 `;
 
 
@@ -41,9 +39,16 @@ export const LeftBarOpenMenuButton = styled.button`
     ${textGradient('#2C62E8', '#E1E9FF', 60)}
   }
   ${templateForMediaLeftBar}
-  @media(min-width: 320px) and (max-width: 550px) {
+  @media(min-width: 420px) and (max-width: 550px) {
     top: -142px;
     height: 142px;
+  }
+  @media(min-width: 320px) and (max-width: 419px) {
+    height: 132px;
+    top: -132px;
+  }
+  @media(min-width: 320px) and (max-width: 550px) {
+    font-size: 20px;
   }
 `;
 
@@ -80,6 +85,9 @@ export const LeftBarButton = styled.button`
     margin-top: 1px;
     margin-bottom: 1px;
   }
+  @media(min-width: 320px) and (max-width: 510px) {
+    font-size: 16px;
+  }
 `;
 
 export const LeftBarMenu = styled.div`
@@ -88,6 +96,7 @@ export const LeftBarMenu = styled.div`
   position: fixed;
   background: #232323;
   ${templateForMediaLeftBar}
+
 `;
 
 export const LeftBarMenuTop = styled.div`

@@ -26,7 +26,7 @@ export const AppBlock = styled.div`
   text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
 `;
 
 export const AppContent = styled.div`

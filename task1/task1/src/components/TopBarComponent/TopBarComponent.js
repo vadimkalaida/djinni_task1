@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TopBar, TopBarOpenButton, TopBarContent, TopBarTextInformationPart, TopBarTextInformationPartBlock, TopBarInformationTitle, TopBarInformationValue,
   TopBarRight, TopBarText, TopBarSwitch, TopBarSlider, TopBarBottomPart, TopBarBottomTextBox } from "./elements";
 
-const TopBarComponent = () => {
+const TopBarComponent = ( props ) => {
   const [ topBarIsOpen, setTopBarIsOpen ] = useState(false);
   const [ isOnline, setIsOnline ] = useState(true);
 

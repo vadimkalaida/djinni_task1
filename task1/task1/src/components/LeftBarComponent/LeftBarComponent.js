@@ -7,6 +7,11 @@ const LeftBarComponent = () => {
   const openMenuClick = () => {
     sessionStorage.setItem('isLeftBarMenuOpened', !openMenuIcon);
     setOpenMenuIcon(!openMenuIcon);
+    if(openMenuIcon === true) {
+      sessionStorage.setItem('mainWidth', '92%');
+    } else {
+      sessionStorage.setItem('mainWidth', '100%');
+    }
   };
 
   return(

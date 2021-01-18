@@ -12,57 +12,147 @@ const mainBlockTemplate = `
   ${ displayFlex('flex-start', 'flex-start', 'column') }
 `;
 
+const mainRightPartTitleTemplate = `
+  font-size: 32px;
+  opacity: .5;
+  margin-left: 35px;
+  margin-bottom: 30px;
+  @media(min-width: 320px) and (max-width: 550px) {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  @media(min-width: 1350px) and (max-width: 1460px) {
+    font-size: 28px;
+  }
+  @media(min-width: 320px) and (max-width: 1349px) {
+    font-size: 24px;
+  }
+  @media(min-width: 550px) and (max-width: 760px) {
+    font-size: 28px;
+  }
+`;
+
 const mainRightPartNumbersTemplate = `
-  font-size: 56px;
   font-weight: 800;
   margin-left: 35px;
   margin-top: 0;
+  font-size: 56px;
+  @media(min-width: 1340px) and (max-width: 1460px) {
+    font-size: 48px;
+  }
+  @media(min-width: 320px) and (max-width: 1349px) {
+    font-size: 40px;
+  }
+  @media(min-width: 550px) and (max-width: 760px) {
+    font-size: 48px;
+  }
+  @media(min-width: 320px) and (max-width: 550px) {
+    margin-left: 20px;
+  }
 `;
 
 export const Main = styled.div`
-  width: 100%;
+  width: 92%;
   min-height: 100px;
   margin-top: 0;
+
 `;
 
 export const MainContainer = styled.div`
-  width: 85%;
-  margin: auto;
+  width: 95%;
   ${ displayFlex('center', 'center', 'row') }
   margin-bottom: 120px;
+  @media(min-width: 320px) and (max-width: 1150px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const MainLeftPart = styled.div`
   width: 76%;
   margin-top: 8%;
-  ${ displayFlex('flex-start', 'flex-start', 'row') }
+  ${ displayFlex('center', 'flex-start', 'row') }
+  @media(min-width: 320px) and (max-width: 1150px) {
+    width: 90%;
+  }
 `;
 
 export const MainNotificationsBlock = styled.div`
   width: 95%;
-  height: 1000px;
+  height: 1020px;
   ${ mainBlockTemplate }
+  @media(min-width: 1350px) and (max-width: 1460px) {
+    height: 920px;
+  }
+  @media(min-width: 320px) and (max-width: 1349px) {
+    height: 840px;
+  }
+  @media(min-width: 320px) and (max-width: 1150px) {
+    margin-bottom: 10px;
+  }
+  @media(min-width: 320px) and (max-width: 759px) {
+    margin-top: 10px;
+  }
 `;
 
 export const MainTitle = styled.p`
-  font-size: 32px;
-  opacity: .5;
-  margin-left: 35px;
-  margin-bottom: 30px;
+  ${ mainRightPartTitleTemplate }
 `;
 
 export const MainRightPart = styled.div`
   width: 24%;
   margin-top: 8%;
   ${ displayFlex('flex-start', 'center', 'column') }
+  @media(min-width: 760px) and (max-width: 1150px) {
+    flex-direction: row;
+    justify-content: center;
+    width: 89%;
+    margin-top: 0;
+  }
+  @media(min-width: 320px) and (max-width: 759px) {
+    justify-content: center;
+    width: 89%;
+    margin-top: 0;
+  }
 `;
 
 export const MainRightPartBlock = styled.div`
   width: 100%;
-  height: 470px;
+  height: 490px;
   margin-top: 2.5vh;
   margin-bottom: 2.5vh;
   ${ mainBlockTemplate }
+  & p {
+    width: 75%;
+  }
+  @media(min-width: 1350px) and (max-width: 1460px) {
+    height: 440px;
+  }
+  @media(min-width: 320px) and (max-width: 1349px) {
+    height: 400px;
+  }
+  @media(min-width: 760px) and (max-width: 1150px) {
+    width: 350px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  @media(min-width: 320px) and (max-width: 759px) {
+    width: 96%;
+  }
+`;
+
+export const MainRightPartTitle = styled.p`
+  ${ mainRightPartTitleTemplate }
+  @media(min-width: 1350px) and (max-width: 1460px) {
+    font-size: 28px;
+  }
+  @media(min-width: 320px) and (max-width: 1349px) {
+    font-size: 24px;
+  }
+  @media(min-width: 550px) and (max-width: 760px) {
+    font-size: 28px;
+  }
 `;
 
 export const MainRightPartParagraph = styled.p`
@@ -71,11 +161,24 @@ export const MainRightPartParagraph = styled.p`
   margin-left: 35px;
   margin-top: 0;
   margin-bottom: 15px;
+  @media(min-width: 1350px) and (max-width: 1460px) {
+    font-size: 20px;
+  }
+  @media(min-width: 320px) and (max-width: 1349px) {
+    font-size: 16px;
+  }
+  @media(min-width: 550px) and (max-width: 760px) {
+    font-size: 24px;
+  }
+  @media(min-width: 320px) and (max-width: 550px) {
+    margin-left: 20px;
+  }
 `;
 
 export const MainRightPartScoreNumber = styled.p`
   ${ mainRightPartNumbersTemplate }
   margin-bottom: 35px;
+  
 `;
 
 export const MainRightPartLine = styled.div`
@@ -85,11 +188,17 @@ export const MainRightPartLine = styled.div`
   opacity: .3;
   margin: auto;
   margin-top: 0;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+  @media(min-width: 320px) and (max-width: 759px) {
+    width: 87%;
+  }
 `;
 
 export const MainRightPartViewsNumber = styled.p`
   ${ mainRightPartNumbersTemplate }
   color: #FF0800;
   margin-top: 45px;
+  @media(min-width: 320px) and (max-width: 1349px) {
+    margin-top: 15px;
+  }
 `;

@@ -9,6 +9,7 @@ import { AppBlock, AppContent } from "./elements";
 
 const App = () => {
 
+
   const getRandomDate = (startDate, endDate) => {
     let foundDate = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
     return `${foundDate.toLocaleString('default', { month: 'short' })} ${foundDate.getDate()} ${foundDate.getFullYear()}`;
@@ -32,10 +33,6 @@ const App = () => {
     } else {
       sessionStorage.setItem('SubRating Value', 0);
     }
-
-    sessionStorage.setItem('Score', (Math.floor(Math.random() * 100) * 10).toString());
-
-    sessionStorage.setItem('Views', (Math.floor(Math.random() * 10000)).toString());
   });
 
   return (
