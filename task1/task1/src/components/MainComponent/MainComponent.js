@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Main, MainContainer, MainLeftPart, MainNotificationsBlock, MainTitle, MainRightPart, MainRightPartBlock,
+import { Main, MainContainer, MainLeftPart, MainNotificationsBlock, MainTitle, MainNotificationsBlockButton, MainRightPart, MainRightPartBlock,
   MainRightPartTitle, MainRightPartParagraph, MainRightPartScoreNumber, MainRightPartLine, MainRightPartViewsNumber, MainRightPartEarningsNumber } from "./elements";
 
 const MainComponent = ( ) => {
@@ -7,6 +7,10 @@ const MainComponent = ( ) => {
   const numberOfViews = Math.floor(Math.random() * 10000);
   const [ totalEarnings, setTotalEarnings ] = useState();
   const [ earningsForDays, setEarningsForDays ] = useState(0);
+
+  const helpCenter = () => {
+    window.alert('I am sorry, but we do not have enough money to develop bot helper:)');
+  };
 
   const getEarningsForMonth = () => {
     // get earnings for month
@@ -24,10 +28,13 @@ const MainComponent = ( ) => {
 
   const getFullAmountOfEarnings = () => {
     let actionWithEarnings = Math.floor(Math.random() * 2);
+    let fullAmountOfMoney = 0;
     if(actionWithEarnings === 0) {
-      setTotalEarnings(earningsForDays / 2);
+      fullAmountOfMoney = (earningsForDays / 2).toFixed(2);
+      setTotalEarnings(fullAmountOfMoney);
     } else {
-      setTotalEarnings(earningsForDays * 2);
+      fullAmountOfMoney = (earningsForDays / 2).toFixed(2);
+      setTotalEarnings(fullAmountOfMoney);
     }
   };
 
@@ -36,12 +43,18 @@ const MainComponent = ( ) => {
   return(
     <Main>
       <MainContainer>
+
         <MainLeftPart>
           <MainNotificationsBlock>
             <MainTitle>Latest notifications</MainTitle>
+            <MainNotificationsBlockButton onClick={ helpCenter }>
+              <i className="fa fa-question-circle" aria-hidden="true"></i>
+            </MainNotificationsBlockButton>
           </MainNotificationsBlock>
         </MainLeftPart>
+
         <MainRightPart>
+
           <MainRightPartBlock>
             <MainRightPartTitle>Status</MainRightPartTitle>
             <MainRightPartParagraph>Your score</MainRightPartParagraph>
@@ -50,6 +63,7 @@ const MainComponent = ( ) => {
             <MainRightPartParagraph>Profile views this week:</MainRightPartParagraph>
             <MainRightPartViewsNumber>{ numberOfViews }</MainRightPartViewsNumber>
           </MainRightPartBlock>
+
           <MainRightPartBlock>
             <MainRightPartTitle>Earnings</MainRightPartTitle>
             <MainRightPartParagraph>Total</MainRightPartParagraph>

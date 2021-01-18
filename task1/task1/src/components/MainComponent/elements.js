@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { displayFlex } from "../../elements";
+import { displayFlex, textGradient } from "../../elements";
 
 const mainBlockTemplate = `
   border: 1px solid #7A9FFA;
@@ -81,6 +81,7 @@ export const MainLeftPart = styled.div`
 export const MainNotificationsBlock = styled.div`
   width: 95%;
   height: 1020px;
+  position: relative;
   ${ mainBlockTemplate }
   @media(min-width: 1350px) and (max-width: 1460px) {
     height: 920px;
@@ -98,6 +99,28 @@ export const MainNotificationsBlock = styled.div`
 
 export const MainTitle = styled.p`
   ${ mainRightPartTitleTemplate }
+`;
+
+export const MainNotificationsBlockButton = styled.button`
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 32px;
+  cursor: pointer;
+  & i {
+    color: #606060;
+  }
+  &:hover i {
+    ${ textGradient('#2C62E8', '#E1E9FF', 60) }
+  }
+  &:active i {
+    ${ textGradient('#3CABE6', '#2C62E8', 60) }
+  }
 `;
 
 export const MainRightPart = styled.div`

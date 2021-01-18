@@ -9,6 +9,6 @@ Some functionalities:
 
 5. Status button on top right, on click changes statement (online/offline) - ready
 
-6. Earnings tab (bottom right) month (currently January) changes based on date - not ready
+6. Earnings tab (bottom right) month (currently January) changes based on date - ready
 
 7. Automatic date on footer copyright - ready

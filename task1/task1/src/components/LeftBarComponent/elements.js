@@ -71,8 +71,6 @@ export const LeftBarButton = styled.button`
   }
   &:active i {
     ${textGradient('#3CABE6', '#2C62E8', 60)}
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
   @media(min-width: 320px) and (max-width: 680px) {
     font-size: 24px;
