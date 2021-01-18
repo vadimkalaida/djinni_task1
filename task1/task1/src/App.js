@@ -19,18 +19,23 @@ const App = () => {
   useEffect(() => {
     const plansArray = ['Basic', 'Standard', 'Premium', 'Premium+', 'Advanced'];
 
-    sessionStorage.setItem('New Request Value', Math.floor(Math.random() * 10 + 1));
+    sessionStorage.setItem('New Request Value', (Math.floor(Math.random() * 10 + 1)).toString());
 
-    sessionStorage.setItem('Processing Value', Math.floor(Math.random() * 18 + 1));
+    sessionStorage.setItem('Processing Value', (Math.floor(Math.random() * 18 + 1)).toString());
 
     sessionStorage.setItem('Plan Value', plansArray[Math.floor(Math.random() * plansArray.length)]);
 
-    sessionStorage.setItem('Rating Value', Math.floor(Math.random() * 5) + 1);
+    sessionStorage.setItem('Rating Value', (Math.floor(Math.random() * 5) + 1).toString());
+
     if(sessionStorage.getItem('Rating Value') < 5) {
-      sessionStorage.setItem('SubRating Value', Math.floor(Math.random() * 10));
+      sessionStorage.setItem('SubRating Value', (Math.floor(Math.random() * 10)).toString());
     } else {
       sessionStorage.setItem('SubRating Value', 0);
     }
+
+    sessionStorage.setItem('Score', (Math.floor(Math.random() * 100) * 10).toString());
+
+    sessionStorage.setItem('Views', (Math.floor(Math.random() * 10000)).toString());
   });
 
   return (
