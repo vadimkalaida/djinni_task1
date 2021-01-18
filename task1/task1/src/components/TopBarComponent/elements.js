@@ -25,6 +25,7 @@ export const TopBarContent = styled.div`
   display: flex;
   position: relative;
   align-items: center;
+  background: #fff;
   -webkit-box-shadow: 0px 3px 5px rgba(84,109,141,0.76);
   -moz-box-shadow: 0px 5px 3px rgba(84,109,141,0.76);
   box-shadow: 0px 3px 5px rgba(84,109,141,0.76);
@@ -190,6 +191,9 @@ export const TopBarBottomTextBox = styled.div`
   height: 30px;
   border: 1px solid #BEBEBE;
   border-radius: 5px;
+  background: #fff;
+  background: -webkit-linear-gradient(to bottom, #F1F0F0, #FEFEFE);
+  background: linear-gradient(to bottom, #F1F0F0, #FEFEFE);
   ${ displayFlex('center', 'center', 'row') }
   margin-left: 5px;
   margin-right: 5px;
@@ -213,8 +217,11 @@ export const TopBarBottomTextBox = styled.div`
     @media(min-width: 550px) and (max-width: 953px) {
       font-size: 18px;
     }
-    @media(min-width: 320px) and (max-width: 549px) {
+    @media(min-width: 400px) and (max-width: 549px) {
       font-size: 14px;
+    }
+    @media(min-width: 320px) and (max-width: 399px) {
+      font-size: 12px;
     }
   }
 `;

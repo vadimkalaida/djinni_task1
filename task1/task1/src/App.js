@@ -4,6 +4,7 @@ import HeaderComponent from './components/HeaderComponent/HeaderComponent';
 import LeftBarComponent from "./components/LeftBarComponent/LeftBarComponent";
 import FooterComponent from "./components/FooterComponent/FooterComponent";
 import TopBarComponent from "./components/TopBarComponent/TopBarComponent";
+import MainComponent from "./components/MainComponent/MainComponent";
 import { AppBlock, AppContent } from "./elements";
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
         <LeftBarComponent />
         <TopBarComponent />
       </AppContent>
+      <MainComponent />
       <FooterComponent />
     </AppBlock>
   );

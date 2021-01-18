@@ -29,12 +29,6 @@ export const AppBlock = styled.div`
   align-items: flex-start;
 `;
 
-export const BigParagraph = styled.p`
-  text-transform: uppercase;
-  color: #242424;
-  font-size: 24px;
-`;
-
 export const AppContent = styled.div`
   width: 100%;
   display: flex;

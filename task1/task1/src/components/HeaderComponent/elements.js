@@ -41,7 +41,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const HeaderLeft = styled.div`
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: flex-start;
   @media(min-width: 320px) and (max-width: 550px) {
@@ -50,14 +50,48 @@ export const HeaderLeft = styled.div`
   }
 `;
 
+export const HeaderLogo = styled.p`
+  text-transform: uppercase;
+  color: #242424;
+  font-size: 24px;
+  @media(min-width: 320px) and (max-width: 750px) {
+    font-size: 20px;
+  }
+`;
+
 export const HeaderRight = styled.div`
-  width: 50%;
+  width: 70%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   @media(min-width: 320px) and (max-width: 550px) {
     width: 100%;
     justify-content: center;
     margin-bottom: 20px;
+  }
+`;
+
+export const HeaderSearchInput = styled.input`
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #455376;
+  font-size: 22px;
+  outline: none;
+  padding-left: 15px;
+  color: #2C62E8;
+  &::placeholder {
+    ${textGradient('#73ADF5', '#475261', 60)}
+  }
+  @media(min-width: 420px) and (max-width: 900px) {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+  }
+  @media(min-width: 320px) and (max-width: 419px) {
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
   }
 `;
 
@@ -78,11 +112,24 @@ export const HeaderButton = styled.button`
   &:active {
     background: #EAEAEA;
   }
+  @media(min-width: 320px) and (max-width: 900px) {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  @media(min-width: 550px) and (max-width: 660px) {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  @media(min-width: 320px) and (max-width: 419px) {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
   & i {
     ${textGradient('#73ADF5', '#475261', 60)}
   }
-  @media(min-width: 320px) and (max-width: 550px) {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
+  
 `;

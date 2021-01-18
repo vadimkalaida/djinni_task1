@@ -3,7 +3,7 @@ Some functionalities:
 
 2. Down arrow (top bar, left) on click hides this white header - ready
 
-3. Search icon on top right, on click expands into input field, and is possible to type keywords - not ready
+3. Search icon on top right, on click expands into input field, and is possible to type keywords - ready
 
 4. Switch button (top right bar) changes the layout - not ready
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { textGradient } from "../../elements";
+import { textGradient, displayFlex } from "../../elements";
 
 const templateForMediaLeftBar = `
   @media(min-width: 1000px) and (max-width: 1600px) {
@@ -20,10 +20,9 @@ const templateForMediaLeftBar = `
 export const LeftBar = styled.div`
   width: 4%;
   height: 90vh;
-  display: flex;
   transition: .2s;
-  display: flex;
-  flex-direction: column;
+  ${ displayFlex('flex-start', 'flex-start', 'column') }
+  z-index: 9999;
   ${templateForMediaLeftBar}
 `;
 
@@ -35,6 +34,7 @@ export const LeftBarOpenMenuButton = styled.button`
   cursor: pointer;
   font-size: 32px;
   outline: none;
+  z-index: 999999;
   position: absolute;
   top: -100px;
   & i {
@@ -92,15 +92,10 @@ export const LeftBarMenu = styled.div`
 
 export const LeftBarMenuTop = styled.div`
   height: 75vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  ${ displayFlex('flex-start', 'center', 'column') }
   margin-top: 0;
 `;
 
 export const LeftBarMenuBottom = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  ${ displayFlex('center', 'flex-end', 'row') }
 `;
