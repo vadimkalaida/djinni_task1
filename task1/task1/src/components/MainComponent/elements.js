@@ -202,3 +202,9 @@ export const MainRightPartViewsNumber = styled.p`
     margin-top: 15px;
   }
 `;
+
+export const MainRightPartEarningsNumber = styled.p`
+  ${ mainRightPartNumbersTemplate }
+  color: #00FF00;
+  margin-top: 5px;
+`;
