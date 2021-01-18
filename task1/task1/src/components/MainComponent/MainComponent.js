@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Main, MainContainer, MainLeftPart, MainNotificationsBlock, MainTitle, MainNotificationsBlockButton, MainRightPart, MainRightPartBlock,
-  MainRightPartTitle, MainRightPartParagraph, MainRightPartScoreNumber, MainRightPartLine, MainRightPartViewsNumber, MainRightPartEarningsNumber } from "./elements";
+import { Main, MainContainer, MainLeftPart, MainNotificationsBlock, MainTitle, MainNotificationsBlockButton, MainNotificationsContent,
+  MainNotificationsBar, MainNotificationsBarGreenCircle, MainNotificationsBarTextBlock, MainNotificationsBarTitle, MainNotificationsBarButton,
+  MainNotificationsBarDate, MainNotificationsBarProgress, MainNotificationsBarProgressContent, MainRightPart, MainRightPartBlock, MainRightPartTitle,
+  MainNotificationsBarParagraph, MainRightPartParagraph, MainRightPartScoreNumber, MainRightPartLine, MainRightPartViewsNumber,
+  MainRightPartEarningsNumber } from "./elements";
 
 const MainComponent = ( ) => {
   const numberOfScores = Math.floor(Math.random() * 100) * 10;
@@ -40,6 +43,15 @@ const MainComponent = ( ) => {
 
   useEffect(getFullAmountOfEarnings, [earningsForDays]);
 
+  const getDateOfPreviousDay = (numOfDaysBack) => {
+    const today = new Date();
+    const yesterday = new Date(today);
+
+    yesterday.setDate(yesterday.getDate() - numOfDaysBack);
+
+    return `${ yesterday.getDate() }. ${ yesterday.toLocaleString('default', { month: 'long' }) } ${ yesterday.getFullYear() }`;
+  };
+
   return(
     <Main>
       <MainContainer>
@@ -50,6 +62,43 @@ const MainComponent = ( ) => {
             <MainNotificationsBlockButton onClick={ helpCenter }>
               <i className="fa fa-question-circle" aria-hidden="true"></i>
             </MainNotificationsBlockButton>
+            <MainNotificationsContent>
+              <MainNotificationsBar>
+                <MainNotificationsBarGreenCircle></MainNotificationsBarGreenCircle>
+                <MainNotificationsBarTextBlock>
+                  <MainNotificationsBarTitle>Report</MainNotificationsBarTitle>
+                  <MainNotificationsBarParagraph>Kaup24.ee asks latest fixed problems report.</MainNotificationsBarParagraph>
+                </MainNotificationsBarTextBlock>
+                <MainNotificationsBarButton>Action</MainNotificationsBarButton>
+                <MainNotificationsBarDate>{ getDateOfPreviousDay(1) }</MainNotificationsBarDate>
+              </MainNotificationsBar>
+              <MainNotificationsBar>
+                <MainNotificationsBarGreenCircle></MainNotificationsBarGreenCircle>
+                <MainNotificationsBarTextBlock>
+                  <MainNotificationsBarTitle>Offer request</MainNotificationsBarTitle>
+                  <MainNotificationsBarParagraph>Zone Eesti AS requesting offer: SQL Injection problem.</MainNotificationsBarParagraph>
+                </MainNotificationsBarTextBlock>
+                <MainNotificationsBarButton>Action</MainNotificationsBarButton>
+                <MainNotificationsBarDate>{ getDateOfPreviousDay(2) }</MainNotificationsBarDate>
+              </MainNotificationsBar>
+              <MainNotificationsBar>
+                <MainNotificationsBarTextBlock>
+                  <MainNotificationsBarTitle>Process update | Elisa Eesti AS</MainNotificationsBarTitle>
+                  <MainNotificationsBarParagraph>Last edit made by info@lucreds.com</MainNotificationsBarParagraph>
+                </MainNotificationsBarTextBlock>
+                <MainNotificationsBarProgress>
+                  <MainNotificationsBarProgressContent></MainNotificationsBarProgressContent>
+                </MainNotificationsBarProgress>
+                <MainNotificationsBarDate>{ getDateOfPreviousDay(3) }</MainNotificationsBarDate>
+              </MainNotificationsBar>
+              <MainNotificationsBar>
+                <MainNotificationsBarTextBlock>
+                  <MainNotificationsBarTitle>Subscription | Will end soon</MainNotificationsBarTitle>
+                  <MainNotificationsBarParagraph>Dear Lucreds, this is friendly to remind you of your VIP Plan subscription, this plan will end in February.</MainNotificationsBarParagraph>
+                </MainNotificationsBarTextBlock>
+                <MainNotificationsBarDate>{ getDateOfPreviousDay(4) }</MainNotificationsBarDate>
+              </MainNotificationsBar>
+            </MainNotificationsContent>
           </MainNotificationsBlock>
         </MainLeftPart>
 
