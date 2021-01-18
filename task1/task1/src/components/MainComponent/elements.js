@@ -214,6 +214,10 @@ export const MainNotificationsBarDate = styled.p`
   right: 0;
   font-size: 14px;
   opacity: .6;
+  @media(min-width: 320px) and (max-width: 420px) {
+    font-size: 12px;
+    bottom: -13px;
+  }
 `;
 
 export const MainNotificationsBarTextBlock = styled.div`
@@ -248,6 +252,7 @@ export const MainNotificationsBarParagraph = styled.p`
   width: 100%;
   font-size: 18px;
   margin-top: 0;
+  
   &:nth-child(3) {
     width: 50%;
   }

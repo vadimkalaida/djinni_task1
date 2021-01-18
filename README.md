@@ -1,3 +1,6 @@
+Preview:
+![previewVideo](https://j.gifs.com/ROpGzY.gif)
+
 Some functionalities:
 1. Left menu bar, should be expandable on click. - ready
 

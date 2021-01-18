@@ -47,8 +47,17 @@ export const LeftBarOpenMenuButton = styled.button`
     height: 132px;
     top: -132px;
   }
-  @media(min-width: 320px) and (max-width: 550px) {
+  @media(min-width: 420px) and (max-width: 550px) {
     font-size: 20px;
+  }
+  @media(min-width: 381px) and (max-width: 419px) {
+    font-size: 19px;
+  }
+  @media(min-width: 361px) and (max-width: 381px) {
+    font-size: 18px;
+  }
+  @media(min-width: 320px) and (max-width: 360px) {
+    font-size: 16px;
   }
 `;
 
